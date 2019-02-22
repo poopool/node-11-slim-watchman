@@ -2,7 +2,7 @@ FROM node:11-slim
 
 MAINTAINER Pouya Na <pouya.naghizadeh@gmail.com>
 
-RUN apt-get update && apt-get install -y git make g++ autoconf pkg-config libtool libssl-dev fastjar && \
+RUN apt-get update && apt-get install -y git make g++ autoconf pkg-config libtool libssl-dev && \
     rm -rf /var/lib/apt/lists/* && \
     git clone https://github.com/facebook/watchman.git /tmp/watchman-src && \
     cd /tmp/watchman-src && \
